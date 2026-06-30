@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Estudiantes</title>
+</head>
+<body>
+    <h1>Registro de estudiantes</h1>
+    <form action="/agregar" method="POST">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required>
+        <br><br>
+        <label>Edad:</label>
+        <input type="number" name="edad" required>
+        <br><br>
+        <label>Curso:</label>
+        <input type="number" name="curso" required>
+        <br><br>
+        <input type="submit" value="Registrar">
+    </form>
+    <hr>
+    <h2>Lista de estudiantes</h2>
+    <ul>
+        {% for estudiante in estudiantes %} <!--Recorre la lista -->
+            <li>
+                <ul>ID: {{ estudiante[0] }} </ul> <!--se manda a llamar la varible y su posición por medio de  {{variable}} -->
+                <ul> Nombre: {{ estudiante[1] }}</ul> 
+                <ul>Edad: {{ estudiante[2] }} </ul>
+                <ul>Curso: {{ estudiante[3] }} </ul>
+            </li>
+        {% endfor %} <!-- FINALIZA EL CICLO-->
+    </ul>
+
+</body>
+</html>

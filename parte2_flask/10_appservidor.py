@@ -17,5 +17,5 @@ def inicio():  #Función que se ejecuta cuando entran a esa ruta
 
 if __name__ == "__main__": #Cuando el archivo se ejecuta directamente su valor es __main__
 #esta linea verifica si el archivo se ejecuta directamente, lo hace solo en ese caso. Si es importado no.
-    app.run(debug=True) ## Inicia el servidor. Flask inicua el servidor con app.run()
+    app.run(debug=True) # Inicia el servidor. Flask inicua el servidor con app.run()
 #Debug=True Es una herramienta para desarrolladores que permite ver errores detallados y recargar automaticamente cuando se guardan cambios.

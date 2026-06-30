@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>formulario</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <form action="/guardar" method="POST"> <!-- define el formulario, indica la ruta de Flask que recibira los datos y los envia al servidor por medio de POST-->
+            <label>Nombre: </label>
+            <input type="text" name="nombre"> <!--input: donde el usuario escribe la info, name=: nombre con el cual Flask recibe el dato-->
+            <br>
+            <label>Apellido: </label>
+            <input type="text" name="apellido">
+            <br>
+            <label>color fav: </label>
+            <input type="text" name="preferencia">
+            <br>
+            <input type="submit" value="Enviar"> <!--boton para enviar el formulario.-->
+        </form>
+        
+        
+    </body>
+</html>

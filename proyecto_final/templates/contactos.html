@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block contenido %}
+
+
+        <h2>Busqueda: </h2>
+            <form action="/buscar" method="GET" class="busqueda"> <!-- define el formulario, indica la ruta de Flask que recibira los datos y los envia al servidor por medio de POST-->
+            <label>Nombre: </label>
+            <input type="text" name="nombre"> <!--input: donde el usuario escribe la info, name=: nombre con el cual Flask recibe el dato-->
+            <br>
+            <br>
+            <button type="submit" value="Buscar"> </button><!--boton para enviar el formulario.-->
+        </form>
+
+        <h1>Lista de Contactos</h1>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Teléfono</th>
+                <th>Correo</th>
+                <th>Acción</th>
+            </tr>
+            {% for contacto in contactos %}
+            <tr>
+                <td>{{ contacto[0] }}</td>
+                <td>{{ contacto[1] }}</td>
+                <td>{{ contacto[2] }}</td>
+                <td>{{ contacto[3] }}</td>
+            <td>
+                <a href="{{ url_for('eliminar', id=contacto[0]) }}">
+                    Eliminar
+                </a>
+            </td>
+            </tr>    
+            {% endfor %}
+        </table>
+        {% endblock %}

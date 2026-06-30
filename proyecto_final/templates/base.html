@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda de Contactos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+    </head>
+<body>
+    <header>
+        <h2>Menú de navegación</h2>
+        <nav>
+            <ul> 
+                <li><a href="{{ url_for('inicio') }}">Inicio</a></li>
+                <li><a href="{{ url_for('mostrar') }}">Contacos</a></li>
+                <li><a href="{{ url_for('agregarop') }}">Agregar contacto</a></li>
+            </ul>
+        </nav>
+        <hr>
+</header>
+<main>
+    {% block contenido %}
+    {% endblock %}
+
+</main>
+
+    <footer>
+        <hr>
+        <h2>Gracias por visitar!</h2>
+        <h2>Siguenos en nuestras redes sociales</h2>
+        <p>Proyecto Final Flask - Agenda de Contactos</p>
+    </footer>
+</body>
+</html>

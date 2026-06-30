@@ -8,7 +8,6 @@ def direccion(): #Definimos la función 'direccion' con la palabra reservada 'de
     print("Tu dirección es: Calle 123") #Dentro de la función se coloca el bloque de código que queremos que se ejecute cuando llamemos a la función.
     
 direccion()
-#Que es un parámetro? Es una variable que se define dentro de la función y recibe unos valores especificos.
 
 def direccion_parametro(calle, numero): #Definimos la función 'direccion_parametro' con dos parámetros 'calle' y 'numero'. 
     print(f"Tu dirección es: {calle} {numero}") #Dentro de la función se coloca el código que queremos que se ejecute cuando la llamemos donde utilize los parámetros.
@@ -17,7 +16,8 @@ direccion_parametro(28,28-56)
 #Valores por defecto son los cuales se asignan a los parametros en caso de que el usuario no ingrese un valor.
 
 def mostrar_edad(edad=18): #Definimos la función 'mostrar_edad' con un parámetro 'edad' y le asignamos un valor por defecto de 18.
-    # print(f"Tu edad es: {edad}") #Dentro de la función se coloca el código que queremos que se ejecute cuando la llamemos donde utilize el parámetro.
+    # print(f"Tu edad es: {edad}") 
+    #Dentro de la función se coloca el código que queremos que se ejecute cuando la llamemos donde utilize el parámetro.
     return edad #La palabra reservada 'return' nos permite devolver un valor desde la función, en este caso el valor del parámetro 'edad'.
 
 mostrar_edad(24)

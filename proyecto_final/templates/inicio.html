@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+<section class="hero">
+
+    <h1>Agenda de Contactos</h1>
+
+    <p>
+        Organiza, consulta y administra tus contactos
+        de manera rápida y sencilla.
+    </p>
+
+    <div class="botones">
+
+        <a href="{{ url_for('mostrar') }}" class="boton">
+            Ver contactos
+        </a>
+
+        <a href="{{ url_for('agregar') }}" class="boton2">
+            Agregar contacto
+        </a>
+
+    </div>
+
+</section>
+<section class="info">
+
+    <div class="caja">
+        <h2> Registra</h2>
+        <p>Guarda nuevos contactos fácilmente.</p>
+    </div>
+
+    <div class="caja">
+        <h2>Busca</h2>
+        <p>Encuentra un contacto por su nombre.</p>
+    </div>
+
+    <div class="caja">
+        <h2>Elimina</h2>
+        <p>Elimina registros que ya no necesites.</p>
+    </div>
+
+</section>
+
+{% endblock %}

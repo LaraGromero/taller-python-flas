@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>bienvenido</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1> bienvenid@ {{nombre}}</h1>
+
+        {% if edad >= 18 %}  <!--inicia la condición--> 
+            <p>Eres mayor de edad.</p>
+        {% else %}  <!--#Si la condición es falsa se ejecuta --> 
+            <p>Eres menor de edad.</p>
+        {% endif %} <!--#finaliza el bloque condicional.--> 
+        
+        <h2> Frutas para escoger: </h2>
+        <ul>
+        {% for fruta in frutas %} <!--#le asigna a cada valor de la lista una variable.-->
+            <li>{{ fruta }}</li> <!--#muestra los valores de la lista-->
+        {% endfor %} 
+        </ul>
+    </body>
+</html>
